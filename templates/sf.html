@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studentForm</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background: rgb(red, #008000, blue);
+            background: linear-gradient(90deg,#ff0000,#008000,yellow,blue);
+
+        }
+        form{
+            color: black;
+            width: fit-content;
+            padding: 30px;
+            background-color: skyblue;
+            box-shadow: -20px 20px 30px red;
+            border-radius: 20px;
+            transition: .6s;
+            
+        }
+        input{
+            transition: .5s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30px blue;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px black;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>studentForm</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{SFO.as_p}}
+
+
+                <input type="submit" value="validate_forms">
+            </table>
+
+            
+        </form>
+    </center>
+</body>
+</html>
